@@ -1,7 +1,7 @@
 本项目修改自[驯兽师联盟主页](https://www.tamersunion.net/) [主题](https://github.com/KTGWKenta/Clearision)，根据幻之字幕组需求做部分调整。
 感谢[dimpurr](https://github.com/dimpurr/)与[KTGWKenta](https://github.com/KTGWKenta/)
 
-安装插件: `External Media without Import` `MaxButtons` `MetaSlider` `smartideo` `to top` `WP-PostViews`
+安装插件: `External Media without Import` `MaxButtons` `MetaSlider` `to top` `WP-PostViews`
 
 图标插入方式: `<i class="fa fa-home" aria-hidden="true">&nbsp;</i>站点首页`
 
@@ -9,7 +9,13 @@
 
 背景图片: https://background-1256109664.cos.ap-shanghai.myqcloud.com/test{rand:1,3}.jpg
 
-smartideo: 使用html添加`[embed]https://v.youku.com/v_show/id_XNDA4MTE1Njg2OA.html[/embed]`
+视频插入方式:
+编辑html
+```
+<video width="100%" height="100%" controls poster="link">
+  <source src="link" type="video/mp4" />
+</video>
+```
 
 MetaSlider: 关闭图像裁剪 开启传送带模式 关闭悬停暂停
 
