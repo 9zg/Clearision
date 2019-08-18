@@ -12,9 +12,19 @@
 视频插入方式:
 编辑html
 ```
-<video width="100%" height="100%" controls poster="link">
-  <source src="link" type="video/mp4" />
-</video>
+<div>
+<link rel="stylesheet" href="https://lib.baomitu.com/dplayer/1.25.0/DPlayer.min.css">
+<div id="dplayer"></div>
+<script src="https://lib.baomitu.com/dplayer/1.25.0/DPlayer.min.js"></script>
+<script>
+const dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    video: {
+        url: 'https://gss3.baidu.com/6LZ0ej3k1Qd3ote6lo7D0j9wehsv/tieba-movideo/148685650_6e3c283c5d7590e51b9e96203721e487_35db7d61ce03.mp4'
+    },
+});
+</script>
+</div>
 ```
 
 MetaSlider: 关闭图像裁剪 开启传送带模式 关闭悬停暂停
