@@ -7,6 +7,17 @@
 
 主题设置: 高级功能 勾选全部第三方组件
 
+关闭评论邮件通知
+
+获取评论真实IP，将如下代码插入WP根目录`wp-config.php`中
+```
+if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])) 
+{
+    $list = explode(',',$_SERVER['HTTP_X_FORWARDED_FOR']);
+    $_SERVER['REMOTE_ADDR'] = $list[0];
+}
+```
+
 WP Super Cache: 启用缓存 新文章/新评论清除缓存
 
 wp-postviews-plus: 将`views`修改为`次浏览`
