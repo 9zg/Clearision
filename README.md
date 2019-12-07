@@ -9,13 +9,11 @@
 
 关闭评论邮件通知
 
-获取评论真实IP，将如下代码插入WP根目录`wp-config.php`中
+获取评论真实IP，在nginx配置文件中的http模块加入以下内容
 ```
-if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])) 
-{
-    $list = explode(',',$_SERVER['HTTP_X_FORWARDED_FOR']);
-    $_SERVER['REMOTE_ADDR'] = $list[0];
-}
+        set_real_ip_from 0.0.0.0/0;
+        
+        real_ip_header X-Forwarded-For;
 ```
 
 WP Super Cache: 启用缓存 新文章/新评论清除缓存
